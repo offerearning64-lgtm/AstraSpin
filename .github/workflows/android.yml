@@ -2,8 +2,7 @@ name: Android APK Build
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -11,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -25,22 +24,21 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
       - name: Sync Capacitor
         run: npx cap sync android
 
-      - name: Grant Gradle Permission
+      - name: Grant execute permission
         run: chmod +x android/gradlew
 
       - name: Build Debug APK
         working-directory: android
         run: ./gradlew assembleDebug
 
-      - name: Upload APK
+      - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
           name: AstraSpin-Debug-APK
-          path: android/app/build/outputs/apk/debug/*.apk
-
+          path: android/app/build/outputs/apk/debug/
