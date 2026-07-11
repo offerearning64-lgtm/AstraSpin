@@ -15,25 +15,28 @@ const AstraSpin = (() => {
         if (_initialized) return;
         _initialized = true;
 
-        /* 1. Initialize storage & wallet */
+        /* 1. Initialize database */
+        await Database.init();
+
+        /* 2. Initialize storage & wallet */
         Wallet.init();
 
-        /* 2. Initialize ad manager */
+        /* 3. Initialize ad manager */
         AdManager.init();
 
-        /* 3. Initialize scroll animation observer */
+        /* 4. Initialize scroll animation observer */
         Animations.initScrollObserver();
 
-        /* 4. Setup all event listeners via Router */
+        /* 5. Setup all event listeners via Router */
         Router.init();
 
-        /* 5. Render initial page content */
+        /* 6. Render initial page content */
         UI.renderHome();
 
-        /* 6. Run the premium loading screen animation */
+        /* 7. Run the premium loading screen animation */
         await Loading.runInitialLoad();
 
-        /* 7. Trigger scroll animations after load */
+        /* 8. Trigger scroll animations after load */
         setTimeout(() => Animations.triggerScrollAnimations(), 300);
 
         console.info('[AstraSpin] v' + AppConfig.version + ' initialized');
@@ -49,3 +52,4 @@ const AstraSpin = (() => {
 document.addEventListener('DOMContentLoaded', () => {
     AstraSpin.init();
 });
+
