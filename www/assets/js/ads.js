@@ -24,8 +24,8 @@ const AdManager = (() => {
 
     /**
      * Attempt to show an interstitial ad before launching a game.
-     * Spec: If ad available → show ad → then launch game.
-     *       If ad unavailable → immediately launch game.
+     * Spec: If ad available -> show ad -> then launch game.
+     *       If ad unavailable -> immediately launch game.
      * @returns {Promise<boolean>} Whether an ad was shown
      */
     async function showInterstitialOrSkip() {
@@ -55,16 +55,7 @@ const AdManager = (() => {
     async function showRewarded() {
         if (!AppConfig.ads.enabled) return false;
 
-        /* Future: Real rewarded ad logic here
-        if (_rewardedReady) {
-            try {
-                const result = await _showAdMobRewarded();
-                return result.earnedReward;
-            } catch {
-                return false;
-            }
-        }
-        */
+        /* Future: Real rewarded ad logic here */
 
         return false;
     }

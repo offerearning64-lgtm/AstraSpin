@@ -36,7 +36,7 @@ const AstraSpin = (() => {
         /* 7. Trigger scroll animations after load */
         setTimeout(() => Animations.triggerScrollAnimations(), 300);
 
-        console.info(`[AstraSpin] v${AppConfig.version} initialized`);
+        console.info('[AstraSpin] v' + AppConfig.version + ' initialized');
     }
 
     /* Public API */
@@ -49,4 +49,3 @@ const AstraSpin = (() => {
 document.addEventListener('DOMContentLoaded', () => {
     AstraSpin.init();
 });
-

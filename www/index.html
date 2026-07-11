@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,29 +7,17 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#FFFFFF">
     <meta name="format-detection" content="telephone=no">
-    
-    <!-- SEO & PWA Placeholders -->
     <title>AstraSpin</title>
     <meta name="description" content="AstraSpin - Premium Gaming Experience">
     <link rel="manifest" href="manifest.json">
-    
-    <!-- Capacitor Compatibility -->
     <meta name="capacitor-server" content="http://localhost">
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-    <!-- Application Shell -->
     <div id="app">
-        
-        <!-- Loading Screen -->
         <div id="loading-screen" class="loading-screen" aria-live="polite">
             <div class="loader-logo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="5 3 19 12 5 21 5 3"/>
-                </svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </div>
             <div class="loader-title">AstraSpin</div>
             <div class="loader-subtitle">Premium Gaming Experience</div>
@@ -40,20 +27,15 @@
             <div class="loader-text" id="loader-text">Initializing...</div>
         </div>
 
-        <!-- Inline Page Loader -->
         <div id="page-loader" class="page-loader" aria-hidden="true">
             <div class="page-spinner"></div>
             <div class="page-loader-text" id="page-loader-text">Loading...</div>
         </div>
 
-        <!-- Application Header -->
         <header class="app-header" id="app-header">
             <div class="header-left">
                 <div class="header-logo" id="header-logo-placeholder">
-                    <!-- Future: Replace with <img src="assets/images/logos/logo.png"> -->
-                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="5 3 19 12 5 21 5 3"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                 </div>
                 <div class="header-brand">
                     <div class="header-title">AstraSpin</div>
@@ -62,24 +44,15 @@
             </div>
             <div class="header-right">
                 <button class="header-icon-btn notif-dot" id="btn-notifications" aria-label="Notifications">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-                        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
                 </button>
                 <button class="header-icon-btn" id="btn-settings-header" aria-label="Settings">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="3"/>
-                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                 </button>
             </div>
         </header>
 
-        <!-- Main Content Area -->
         <main class="content-area" id="content-area">
-
-            <!-- HOME PAGE -->
             <div class="page active" id="page-home">
                 <div class="hero-card anim-in" id="hero-card">
                     <div class="hero-badge">
@@ -143,10 +116,7 @@
                 <div class="px-20 pb-16">
                     <div class="update-card">
                         <div class="update-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                                <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         </div>
                         <div class="update-text">
                             <div class="update-title">Version 2.1 is here</div>
@@ -165,7 +135,6 @@
                 <div class="spacer-24"></div>
             </div>
 
-            <!-- GAMES PAGE -->
             <div class="page" id="page-games">
                 <div class="section" style="padding-bottom: 12px;">
                     <h1 class="text-h1">All Games</h1>
@@ -176,7 +145,6 @@
                 <div class="spacer-24"></div>
             </div>
 
-            <!-- REWARDS PAGE -->
             <div class="page" id="page-rewards">
                 <div class="section" style="padding-bottom: 0;">
                     <h1 class="text-h1">Rewards</h1>
@@ -190,26 +158,19 @@
                 <div class="reward-actions">
                     <button class="reward-action-btn" id="btn-daily-mission">
                         <div class="reward-action-icon" style="background: var(--green-light);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
                         </div>
                         <span class="reward-action-label">Daily Missions</span>
                     </button>
                     <button class="reward-action-btn" id="btn-lucky-spin">
                         <div class="reward-action-icon" style="background: var(--orange-light);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 12a9 9 0 1 1-6.219-8.56"/><path d="M21 3v9h-9"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/><path d="M21 3v9h-9"/></svg>
                         </div>
                         <span class="reward-action-label">Lucky Spin</span>
                     </button>
                     <button class="reward-action-btn" id="btn-achievements">
                         <div class="reward-action-icon" style="background: var(--blue-light);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
                         </div>
                         <span class="reward-action-label">Achievements</span>
                     </button>
@@ -221,7 +182,6 @@
                 <div class="spacer-24"></div>
             </div>
 
-            <!-- WALLET PAGE -->
             <div class="page" id="page-wallet">
                 <div class="section" style="padding-bottom: 0;">
                     <h1 class="text-h1">Wallet</h1>
@@ -248,14 +208,10 @@
                 <div class="spacer-24"></div>
             </div>
 
-            <!-- PROFILE PAGE -->
             <div class="page" id="page-profile">
                 <div class="profile-header">
                     <div class="profile-avatar" id="profile-avatar-placeholder">
-                        <!-- Future: <img src="assets/images/icons/avatar.png"> -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     </div>
                     <div class="profile-name" id="profile-name">Guest Player</div>
                     <div class="profile-id" id="profile-id">ID: GUEST-0001</div>
@@ -281,9 +237,7 @@
                         <div class="settings-item">
                             <div class="settings-item-left">
                                 <div class="settings-item-icon" style="background: var(--green-light);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
                                 </div>
                                 <span class="settings-item-label">Sound</span>
                             </div>
@@ -292,9 +246,7 @@
                         <div class="settings-item">
                             <div class="settings-item-left">
                                 <div class="settings-item-icon" style="background: var(--orange-light);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
                                 </div>
                                 <span class="settings-item-label">Music</span>
                             </div>
@@ -303,9 +255,7 @@
                         <div class="settings-item">
                             <div class="settings-item-left">
                                 <div class="settings-item-icon" style="background: var(--blue-light);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
                                 </div>
                                 <span class="settings-item-label">Notifications</span>
                             </div>
@@ -320,9 +270,7 @@
                         <div class="settings-item" id="btn-login">
                             <div class="settings-item-left">
                                 <div class="settings-item-icon" style="background: var(--green-light);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
                                 </div>
                                 <span class="settings-item-label">Sign In</span>
                             </div>
@@ -333,9 +281,7 @@
                         <div class="settings-item" id="btn-cloud-save">
                             <div class="settings-item-left">
                                 <div class="settings-item-icon" style="background: var(--blue-light);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
                                 </div>
                                 <span class="settings-item-label">Cloud Save</span>
                             </div>
@@ -344,10 +290,7 @@
                         <div class="settings-item" id="btn-referral">
                             <div class="settings-item-left">
                                 <div class="settings-item-icon" style="background: var(--orange-light);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                                 </div>
                                 <span class="settings-item-label">Referral Program</span>
                             </div>
@@ -362,9 +305,7 @@
                         <div class="settings-item" id="btn-privacy">
                             <div class="settings-item-left">
                                 <div class="settings-item-icon" style="background: var(--bg);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                                 </div>
                                 <span class="settings-item-label">Privacy Policy</span>
                             </div>
@@ -375,9 +316,7 @@
                         <div class="settings-item" id="btn-version">
                             <div class="settings-item-left">
                                 <div class="settings-item-icon" style="background: var(--bg);">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
-                                    </svg>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                                 </div>
                                 <span class="settings-item-label">Version</span>
                             </div>
@@ -387,27 +326,21 @@
                 </div>
                 <div class="spacer-32"></div>
             </div>
-
         </main>
 
-        <!-- Game Detail Modal -->
         <div class="modal-overlay" id="modal-overlay"></div>
         <div class="modal-sheet" id="modal-sheet">
             <div class="modal-handle"><div class="modal-handle-bar"></div></div>
             <div class="modal-game-thumb" id="modal-thumb">
                 <div class="modal-game-thumb-placeholder" id="modal-thumb-placeholder"></div>
                 <button class="modal-close" id="modal-close" aria-label="Close">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 </button>
             </div>
             <div class="modal-body">
                 <h2 class="modal-game-title" id="modal-title"></h2>
                 <div class="modal-game-category" id="modal-category">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;">
-                        <polygon points="5 3 19 12 5 21 5 3"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                     <span></span>
                 </div>
                 <p class="modal-game-desc" id="modal-desc"></p>
@@ -426,57 +359,40 @@
                     </div>
                 </div>
                 <button class="modal-play-btn" id="modal-play-btn">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="5 3 19 12 5 21 5 3"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                     Play Now
                 </button>
             </div>
         </div>
 
-        <!-- Toast -->
         <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-        <!-- Bottom Navigation -->
         <nav class="bottom-nav" id="bottom-nav" aria-label="Main navigation">
             <div class="nav-items">
                 <button class="nav-item active" data-page="home" aria-label="Home">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                     <span class="nav-item-label">Home</span>
                 </button>
                 <button class="nav-item" data-page="games" aria-label="Games">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/>
-                        <circle cx="16" cy="10" r="1" fill="currentColor"/><circle cx="18" cy="12" r="1" fill="currentColor"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="16" cy="10" r="1" fill="currentColor"/><circle cx="18" cy="12" r="1" fill="currentColor"/></svg>
                     <span class="nav-item-label">Games</span>
                 </button>
                 <button class="nav-item" data-page="rewards" aria-label="Rewards">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
                     <span class="nav-item-label">Rewards</span>
                 </button>
                 <button class="nav-item" data-page="wallet" aria-label="Wallet">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/><circle cx="17" cy="14" r="1.5"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/><circle cx="17" cy="14" r="1.5"/></svg>
                     <span class="nav-item-label">Wallet</span>
                 </button>
                 <button class="nav-item" data-page="profile" aria-label="Profile">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     <span class="nav-item-label">Profile</span>
                 </button>
             </div>
         </nav>
-
     </div>
 
-    <!-- JavaScript Modules (Loaded in strict dependency order) -->
     <script src="assets/js/config.js"></script>
     <script src="assets/js/helpers.js"></script>
     <script src="assets/js/storage.js"></script>
@@ -490,4 +406,3 @@
     <script src="assets/js/app.js"></script>
 </body>
 </html>
-

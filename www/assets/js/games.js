@@ -34,9 +34,9 @@ const GameData = (() => {
             id: 'jungle-quest',
             title: 'Jungle Quest',
             description: 'Embark on an epic adventure through mystical jungle temples and discover ancient treasures hidden for centuries.',
-            thumbnailURL: '',  // Future: 'assets/images/games/jungle-quest-thumb.png'
-            iconURL: '',       // Future: 'assets/images/games/jungle-quest-icon.png'
-            gameURL: '',       // Future: URL or route for the game
+            thumbnailURL: '',
+            iconURL: '',
+            gameURL: '',
             reward: 100,
             category: 'adventure',
             difficulty: 'Medium',

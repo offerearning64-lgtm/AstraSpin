@@ -27,7 +27,7 @@ const UI = (() => {
     }
 
     /* ======================================================================
-       PAGE NAVIGATION (Delegate to Router, but UI manages rendering)
+       PAGE NAVIGATION
        ====================================================================== */
 
     async function navigateTo(pageName) {
@@ -175,35 +175,34 @@ const UI = (() => {
         }
 
         const thumbContent = game.thumbnailURL
-            ? `<img src="${game.thumbnailURL}" alt="${game.title}" style="width:100%;height:100%;object-fit:cover;">`
-            : `<div class="game-card-thumb-placeholder" style="background:${game.themeGradient};">${Helpers.icons.play}</div>`;
+            ? '<img src="' + game.thumbnailURL + '" alt="' + game.title + '" style="width:100%;height:100%;object-fit:cover;">'
+            : '<div class="game-card-thumb-placeholder" style="background:' + game.themeGradient + ';">' + Helpers.icons.play + '</div>';
 
         const favSvg = isFav ? Helpers.icons.heartFilled : Helpers.icons.heart;
 
-        card.innerHTML = `
-            <div class="game-card-thumb">
-                ${thumbContent}
-                ${badgeHTML}
-                <button class="game-card-fav ${isFav ? 'active' : ''}" data-fav-id="${game.id}" aria-label="Favorite">
-                    ${favSvg}
-                </button>
-            </div>
-            <div class="game-card-body">
-                <div class="game-card-title">${game.title}</div>
-                <div class="game-card-desc">${game.description}</div>
-                <div class="game-card-footer">
-                    <div class="game-card-meta">
-                        ${Helpers.icons.reward}
-                        +${game.reward}
-                    </div>
-                    <button class="game-card-play" data-play-id="${game.id}" aria-label="Play ${game.title}">
-                        ${Helpers.icons.playSmall}
-                    </button>
-                </div>
-            </div>
-        `;
+        card.innerHTML = 
+            '<div class="game-card-thumb">' +
+                thumbContent +
+                badgeHTML +
+                '<button class="game-card-fav ' + (isFav ? 'active' : '') + '" data-fav-id="' + game.id + '" aria-label="Favorite">' +
+                    favSvg +
+                '</button>' +
+            '</div>' +
+            '<div class="game-card-body">' +
+                '<div class="game-card-title">' + game.title + '</div>' +
+                '<div class="game-card-desc">' + game.description + '</div>' +
+                '<div class="game-card-footer">' +
+                    '<div class="game-card-meta">' +
+                        Helpers.icons.reward +
+                        '+' + game.reward +
+                    '</div>' +
+                    '<button class="game-card-play" data-play-id="' + game.id + '" aria-label="Play ' + game.title + '">' +
+                        Helpers.icons.playSmall +
+                    '</button>' +
+                '</div>' +
+            '</div>';
 
-        /* Card click → detail modal */
+        /* Card click -> detail modal */
         card.addEventListener('click', (e) => {
             if (e.target.closest('.game-card-fav') || e.target.closest('.game-card-play')) return;
             openGameDetail(game.id);
@@ -417,19 +416,18 @@ const UI = (() => {
             const isCredit = item.type === 'credit';
             const el = document.createElement('div');
             el.className = 'reward-history-item';
-            el.innerHTML = `
-                <div class="reward-history-icon" style="background:${isCredit ? 'var(--green-light)' : 'var(--orange-light)'};">
-                    ${isCredit
+            el.innerHTML = 
+                '<div class="reward-history-icon" style="background:' + (isCredit ? 'var(--green-light)' : 'var(--orange-light)') + ';">' +
+                    (isCredit
                         ? '<svg viewBox="0 0 24 24" fill="none" stroke="var(--green-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>'
                         : '<svg viewBox="0 0 24 24" fill="none" stroke="var(--orange-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>'
-                    }
-                </div>
-                <div class="reward-history-info">
-                    <div class="reward-history-title">${item.title}</div>
-                    <div class="reward-history-time">${Helpers.formatTimeAgo(item.date)}</div>
-                </div>
-                <div class="reward-history-amount ${isCredit ? 'positive' : 'negative'}">${item.amount}</div>
-            `;
+                    ) +
+                '</div>' +
+                '<div class="reward-history-info">' +
+                    '<div class="reward-history-title">' + item.title + '</div>' +
+                    '<div class="reward-history-time">' + Helpers.formatTimeAgo(item.date) + '</div>' +
+                '</div>' +
+                '<div class="reward-history-amount ' + (isCredit ? 'positive' : 'negative') + '">' + item.amount + '</div>';
             fragment.appendChild(el);
         });
 
@@ -462,18 +460,17 @@ const UI = (() => {
             const isCredit = tx.type === 'credit';
             const el = document.createElement('div');
             el.className = 'wallet-tx-item';
-            el.innerHTML = `
-                <div class="wallet-tx-icon" style="background:${isCredit ? 'var(--green-light)' : 'var(--orange-light)'};">
-                    ${isCredit ? Helpers.icons.arrowUp : Helpers.icons.arrowDown}
-                </div>
-                <div class="wallet-tx-info">
-                    <div class="wallet-tx-title">${tx.source}</div>
-                    <div class="wallet-tx-date">${Helpers.formatDate(tx.date)}</div>
-                </div>
-                <div class="wallet-tx-amount" style="color:${isCredit ? 'var(--green-primary)' : 'var(--text-secondary)'};">
-                    ${isCredit ? '+' : '-'}${tx.amount}
-                </div>
-            `;
+            el.innerHTML = 
+                '<div class="wallet-tx-icon" style="background:' + (isCredit ? 'var(--green-light)' : 'var(--orange-light)') + ';">' +
+                    (isCredit ? Helpers.icons.arrowUp : Helpers.icons.arrowDown) +
+                '</div>' +
+                '<div class="wallet-tx-info">' +
+                    '<div class="wallet-tx-title">' + tx.source + '</div>' +
+                    '<div class="wallet-tx-date">' + Helpers.formatDate(tx.date) + '</div>' +
+                '</div>' +
+                '<div class="wallet-tx-amount" style="color:' + (isCredit ? 'var(--green-primary)' : 'var(--text-secondary)') + ';">' +
+                    (isCredit ? '+' : '-') + tx.amount +
+                '</div>';
             fragment.appendChild(el);
         });
 
