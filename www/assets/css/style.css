@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 /* ============================================
    AstraSpin - Premium Gaming App Styles
    ============================================ */
@@ -1624,3 +1632,96 @@ svg { display: block; }
     .hero-stat-value { font-size: 16px; }
 }
 
+/* === AstraSpin Missing UI Fix === */
+
+.hero-card {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border);
+}
+
+.hero-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.hero-desc {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.category-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.category-chip.active {
+    background: var(--accent);
+    color: #000;
+}
+
+.game-card-lg {
+    min-width: 260px;
+    height: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+}
+
+.games-scroll {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 8px 2px 18px;
+}
+
+.games-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* === Main Content Layout Fix === */
+
+.content-area {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.games-scroll {
+    width: 100%;
+}
+
+.hero-section {
+    width: 100%;
+}
+
+.section-title {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
