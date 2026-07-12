@@ -23,7 +23,8 @@ window.AdminConfig = {
         "games",
         "categories",
         "uploads",
-        "settings"
+        "settings",
+        "users"
     ],
 
     features: {

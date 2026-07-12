@@ -8,14 +8,18 @@ window.AdminRouter = {
 
         const content = document.getElementById("admin-content");
 
-        if (content) {
-            content.innerHTML = `
-                <h2>${moduleName.charAt(0).toUpperCase() + moduleName.slice(1)}</h2>
-                <p>${moduleName} module loaded.</p>
-            `;
+        if (window.AdminModules[moduleName] && typeof window.AdminModules[moduleName].init === "function") {
+            window.AdminModules[moduleName].init();
+            console.log("Module:", moduleName);
+        } else {
+            if (content) {
+                content.innerHTML = `
+                    <h2>${moduleName}</h2>
+                    <p>${moduleName} module not found</p>
+                `;
+            }
+            console.log("Module missing:", moduleName);
         }
-
-        console.log("Module:", moduleName);
     }
 };
 
