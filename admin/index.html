@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstraSpin Admin Panel</title>
+
+  <meta name="robots" content="noindex,nofollow">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+    <header class="topbar">
+        <h1>AstraSpin Admin Panel</h1>
+        <span>Version 1.0</span>
+    </header>
+
+    <aside class="sidebar">
+
+        <button data-page="dashboard">Dashboard</button>
+
+        <button data-page="games">Games</button>
+
+        <button data-page="categories">Categories</button>
+
+        <button data-page="uploads">Uploads</button>
+
+        <button data-page="wallet">Wallet</button>
+
+        <button data-page="redeem">Redeem</button>
+
+        <button data-page="ads">Ads</button>
+
+        <button data-page="analytics">Analytics</button>
+
+        <button data-page="settings">Settings</button>
+
+    </aside>
+
+    <main class="content" id="admin-content">
+
+        <h2>Welcome</h2>
+
+        <p>
+            AstraSpin Admin Panel is loading successfully.
+        </p>
+
+        <p>
+            Future modules will be loaded here.
+        </p>
+
+    </main>
+
+</div>
+
+<script src="assets/js/core/config.js"></script>
+<script src="assets/js/core/store.js"></script>
+<script src="assets/js/core/events.js"></script>
+<script src="assets/js/core/module-loader.js"></script>
+<script src="assets/js/core/router.js"></script>
+
+<script src="assets/js/modules/dashboard.js"></script>
+<script src="assets/js/modules/games.js"></script>
+<script src="assets/js/modules/categories.js"></script>
+<script src="assets/js/modules/uploads.js"></script>
+<script src="assets/js/modules/settings.js"></script>
+
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
