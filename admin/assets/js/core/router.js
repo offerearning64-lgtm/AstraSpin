@@ -29,7 +29,7 @@ var Router = {
             return;
         }
 
-        console.log('PAGE =', page);
+        console.log('PAGE =', page, 'TARGET MODULE=', global.AdminModules[page]);
         console.log('MODULES =', Object.keys(global.AdminModules));
 
         var module=global.AdminModules[page];
