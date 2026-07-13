@@ -346,7 +346,7 @@
 
             // Global data refresh listener
             document.addEventListener('data-updated', function(e) {
-                if (e.detail && e.detail.module === 'games') {
+                if (e.detail && (e.detail.module === 'games' || e.detail.module === 'categories')) {
                     self.refresh();
                 }
             });
