@@ -156,7 +156,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="game-category">Category <span class="required">*</span></label>
-                                    <select id="game-category" required></select>
+                                    <select id="game-category"></select>
                                 </div>
                                 <div class="form-group">
                                     <label for="game-thumbnail">Thumbnail URL</label>
@@ -385,7 +385,7 @@
             var select = this.cache.form.querySelector('#game-category');
             if (!select) return;
 
-            select.innerHTML = '<option value="">Select Category</option>';
+            select.innerHTML = '<option value="General">General</option>';
 
             try {
                 var data = JSON.parse(localStorage.getItem('astraspin_categories') || '[]');
