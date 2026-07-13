@@ -8,10 +8,10 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log("Config Loaded");
     }
 
-    // सभी modules load करें
-    if (window.AdminConfig && window.AdminModuleLoader) {
-        AdminModuleLoader.loadAll(AdminConfig.modules);
-    }
+    /*
+     * Modules पहले ही index.html में load हो चुके हैं.
+     * इसलिए दोबारा AdminModuleLoader.loadAll() नहीं चलाना है.
+     */
 
     // Sidebar buttons
     const buttons = document.querySelectorAll("[data-page]");
