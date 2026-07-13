@@ -231,7 +231,7 @@
                         <div class="empty-icon">🎮</div>
                         <h3>No games found</h3>
                         <p>Try adjusting your search or add a new game.</p>
-                        <button id="create-first-game-btn" class="btn-primary">Create First Game</button>
+
                     </div>
                 `;
                 return;
