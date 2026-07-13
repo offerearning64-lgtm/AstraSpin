@@ -167,7 +167,7 @@
                         <div class="empty-icon">📂</div>
                         <h3>No categories found</h3>
                         <p>Add your first category to organize games.</p>
-                        <button id="empty-add-btn" class="btn-primary">Add Category</button>
+                        <button id="empty-category-btn" class="btn-primary">Add Category</button>
                     </div>
                 `;
                 return;
@@ -245,7 +245,7 @@
                     self.editCategory(id);
                 } else if (target.classList.contains('btn-delete')) {
                     self.deleteCategory(id);
-                } else if (target.id === 'empty-add-btn') {
+                } else if (target.id === 'empty-category-btn') {
                     self.showAddModal();
                 }
             });
