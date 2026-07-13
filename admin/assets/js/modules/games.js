@@ -242,13 +242,13 @@
                 html += `
                     <div class="game-card" data-id="${game.id}">
                         <div class="game-thumbnail">
-                            \( {game.thumbnail ? `<img src=" \){this.escapeHtml(game.thumbnail)}" alt="${this.escapeHtml(game.name)}" onerror="this.style.display='none'">` : '<div class="no-thumb">🎮</div>'}
+                            ${game.thumbnail ? `<img src="${this.escapeHtml(game.thumbnail)}" alt="${this.escapeHtml(game.name)}" onerror="this.style.display='none'">` : '<div class="no-thumb">🎮</div>'}
                         </div>
                         <div class="game-info">
                             <div class="game-name">${this.escapeHtml(game.name)}</div>
                             <div class="game-category">${this.escapeHtml(game.category)}</div>
                             <div class="game-status \( {game.status.toLowerCase()}"> \){game.status}</div>
-                            \( {game.description ? `<div class="game-desc"> \){this.escapeHtml(game.description.substring(0, 80))}${game.description.length > 80 ? '...' : ''}</div>` : ''}
+                            ${game.description ? `<div class="game-desc">${this.escapeHtml(game.description.substring(0, 80))}${game.description.length > 80 ? '...' : ''}</div>` : ''}
                             <div class="game-actions">
                                 <button class="btn-edit" data-id="${game.id}">Edit</button>
                                 <button class="btn-delete" data-id="${game.id}">Delete</button>
