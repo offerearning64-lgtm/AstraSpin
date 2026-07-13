@@ -1,11 +1,30 @@
-/* AstraSpin Admin Module Loader v11 */
+/**
+ * AstraSpin Admin Panel - Module Loader v11.0.0
+ * Simple & Reliable
+ */
 
-window.AdminModuleLoader = {
+(function(global) {
+    'use strict';
 
-    loadAll(modules) {
-        console.log("Modules ready:", modules);
+    if (typeof global.AdminModules === 'undefined') {
+        global.AdminModules = {};
     }
 
-};
+    var ModuleLoader = {
+        register: function(name, module) {
+            if (name && module) {
+                global.AdminModules[name] = module;
+                console.log(`[ModuleLoader] Registered: ${name}`);
+            }
+        }
+    };
 
-console.log("Module Loader Ready");
+    global.ModuleLoader = ModuleLoader;
+
+    // Log all modules after full load
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            console.log('[ModuleLoader] All Modules:', Object.keys(global.AdminModules));
+        }, 1200);
+    });
+})(window);

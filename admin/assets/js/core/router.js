@@ -1,37 +1,65 @@
+/**
+ * AstraSpin Admin Panel - Router v11.0.0
+ * data-page system preserved
+ */
 
+(function(global) {
+    'use strict';
 
-/* AstraSpin Admin Router v11 */
+    var Router = {
+        init: function() {
+            this.attachListeners();
+        },
 
-window.AdminRouter = {
+        attachListeners: function() {
+            var self = this;
+            
+            document.addEventListener('click', function(e) {
+                var btn = e.target.closest('[data-page]');
+                if (!btn) return;
 
-    current: "dashboard",
+                var page = btn.getAttribute('data-page');
+                if (!page) return;
 
-    go(moduleName) {
+                e.preventDefault();
+                self.navigate(page);
+            });
+        },
 
-        this.current = moduleName;
+        navigate: function(page) {
+            console.log(`[Router] Navigating to: ${page}`);
 
-        if (
-            window.AdminModules &&
-            AdminModules[moduleName] &&
-            typeof AdminModules[moduleName].init === "function"
-        ) {
-
-            AdminModules[moduleName].init();
-
-            console.log("Module loaded:", moduleName);
-
-        } else {
-
-            const content = document.getElementById("admin-content");
-
-            if (content) {
-                content.innerHTML = `
-                    <h2>${moduleName}</h2>
-                    <p>${moduleName} module not found</p>
-                `;
+            if (!global.AdminModules) {
+                console.error('[Router] AdminModules not available');
+                return;
             }
 
-            console.log("Module missing:", moduleName);
+            var module = global.AdminModules[page];
+
+            if (!module) {
+                console.error(`[Router] Module "${page}" not found! Check script loading order.`);
+                alert(`Module "${page}" not loaded. Please refresh the page.`);
+                return;
+            }
+
+            if (typeof module.init === 'function') {
+                try {
+                    module.init();
+                } catch (err) {
+                    console.error(`[Router] Error in ${page}.init():`, err);
+                }
+            } else {
+                console.warn(`[Router] ${page} has no init() method`);
+            }
         }
+    };
+
+    // Initialize router
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => Router.init());
+    } else {
+        Router.init();
     }
-};
+
+    global.AdminRouter = Router;
+})(window);

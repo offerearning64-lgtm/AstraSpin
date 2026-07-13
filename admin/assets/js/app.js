@@ -1,81 +1,31 @@
-/* AstraSpin Admin App v11 */
+/**
+ * AstraSpin Admin Panel - Main App v11.0.0
+ * Mobile Optimized - Fixed Module Loading
+ */
 
-window.addEventListener("DOMContentLoaded", () => {
+(function(global) {
+    'use strict';
 
-    console.log("Starting AstraSpin Admin Panel...");
+    console.log('%c[AstraSpin] v11.0.0 Initializing...', 'color:#6366f1;font-weight:bold');
 
-    // Check modules
-    if (!window.AdminModules) {
-        window.AdminModules = {};
-    }
-
-    console.log(
-        "Available Modules:",
-        Object.keys(window.AdminModules)
-    );
-
-
-    // Sidebar buttons
-    const buttons = document.querySelectorAll("[data-page]");
-
-    buttons.forEach(button => {
-
-        button.addEventListener("click", () => {
-
-            const page = button.dataset.page;
-
-            console.log("Opening module:", page);
-
-
-            if (
-                window.AdminModules &&
-                AdminModules[page] &&
-                typeof AdminModules[page].init === "function"
-            ) {
-
-                AdminModules[page].init();
-
-                console.log(
-                    "Module opened:",
-                    page
-                );
-
-            } else if (window.AdminRouter) {
-
-                AdminRouter.go(page);
-
+    var App = {
+        init: function() {
+            console.log('[App] DOM ready. Initializing Dashboard...');
+            
+            if (global.AdminModules && global.AdminModules.dashboard) {
+                global.AdminModules.dashboard.init();
             } else {
-
-                console.log(
-                    "Module missing:",
-                    page
-                );
-
+                console.error('[App] Dashboard module not found!');
             }
+        }
+    };
 
-        });
-
-    });
-
-
-    // Default Dashboard
-    if (
-        window.AdminModules &&
-        AdminModules.dashboard &&
-        typeof AdminModules.dashboard.init === "function"
-    ) {
-
-        AdminModules.dashboard.init();
-
-        console.log(
-            "Dashboard loaded"
-        );
-
+    // Initialize after all scripts load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', App.init);
+    } else {
+        App.init();
     }
 
-
-    console.log(
-        "AstraSpin Admin Panel Ready"
-    );
-
-});
+    global.AstraSpinApp = App;
+})(window);
