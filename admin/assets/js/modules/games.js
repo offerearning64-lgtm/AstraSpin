@@ -247,7 +247,7 @@
                         <div class="game-info">
                             <div class="game-name">${this.escapeHtml(game.name)}</div>
                             <div class="game-category">${this.escapeHtml(game.category)}</div>
-                            <div class="game-status \( {game.status.toLowerCase()}"> \){game.status}</div>
+                            <div class="game-status ${game.status.toLowerCase()}">${game.status}</div>
                             ${game.description ? `<div class="game-desc">${this.escapeHtml(game.description.substring(0, 80))}${game.description.length > 80 ? '...' : ''}</div>` : ''}
                             <div class="game-actions">
                                 <button class="btn-edit" data-id="${game.id}">Edit</button>
