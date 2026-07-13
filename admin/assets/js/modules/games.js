@@ -385,19 +385,20 @@
             var select = this.cache.form.querySelector('#game-category');
             if (!select) return;
 
-            // Get existing categories
-            var cats = new Set();
-            this.games.forEach(function(g) {
-                if (g.category) cats.add(g.category);
-            });
-
             select.innerHTML = '<option value="">Select Category</option>';
-            Array.from(cats).sort().forEach(function(cat) {
-                var opt = document.createElement('option');
-                opt.value = cat;
-                opt.textContent = cat;
-                select.appendChild(opt);
-            });
+
+            try {
+                var data = JSON.parse(localStorage.getItem('astraspin_categories') || '[]');
+
+                data.forEach(function(cat) {
+                    var opt = document.createElement('option');
+                    opt.value = cat.name;
+                    opt.textContent = cat.name;
+                    select.appendChild(opt);
+                });
+            } catch(e) {
+                console.error(e);
+            }
         },
 
         handleFormSubmit: function() {
