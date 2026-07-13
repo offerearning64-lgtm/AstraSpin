@@ -29,7 +29,10 @@ var Router = {
             return;
         }
 
-        console.log('PAGE =', page);\n        console.log('MODULES =', Object.keys(global.AdminModules));\n\n        var module=global.AdminModules[page];
+        console.log('PAGE =', page);
+        console.log('MODULES =', Object.keys(global.AdminModules));
+
+        var module=global.AdminModules[page];
 
         if(!module){
             alert("Module '"+page+"' not found");
