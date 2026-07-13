@@ -231,7 +231,7 @@
                         <div class="empty-icon">🎮</div>
                         <h3>No games found</h3>
                         <p>Try adjusting your search or add a new game.</p>
-                        <button id="empty-add-btn" class="btn-primary">Add Your First Game</button>
+                        <button id="create-first-game-btn" class="btn-primary">Create First Game</button>
                     </div>
                 `;
                 return;
@@ -339,7 +339,7 @@
                 } else if (target.classList.contains('btn-delete')) {
                     var id = target.getAttribute('data-id');
                     self.deleteGame(id);
-                } else if (target.id === 'empty-add-btn') {
+                } else if (target.id === 'create-first-game-btn') {
                     self.showAddModal();
                 }
             });
